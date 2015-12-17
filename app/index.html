@@ -2,15 +2,20 @@
 <html>
 	<head>
 		<title>Electron Proof of Concept</title>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../css/photon.min.css">
+		
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="https://trello.com/1/client.js?key=261719af2240e6a51d9ea533e7eef9e1"></script>
 		<script src="main.js"></script>
 	</head>
 	<body>
-		<button onclick="loginToTrello()">Authenticate</button>
-		<button onclick="addCard()">Add a Card</button>
-		<script>
-
-		</script>
+		<div class="window">
+			<div class="window-content">
+				<button class="btn btn-large btn-primary" onclick="loginToTrello()">Authenticate</button>
+				<button class="btn btn-positive" onclick="addCard()">Add a Card</button>
+			</div>
+		</div>
 	</body>
 </html>
