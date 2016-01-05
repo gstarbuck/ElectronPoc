@@ -2,6 +2,7 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 
 ///<reference path="https://trello.com/1/client.js" />
+///<reference path="http://code.jquery.com/jquery-1.7.1.min.js" />
 
 var mainWindow = null;
 
@@ -51,4 +52,19 @@ function addCard() {
 	var newCard = {name: "New Test Card", desc: "This is the description of our new card.", pos: "top", idList: myList};
 	
 	Trello.post("/cards", newCard, creationSuccess);
+}
+
+function getPRComments(){
+    $.ajax({
+        type: "GET",
+        url: "https://bitbucket.org/api/2.0/repositories/yaharasoftware/natus_platformmigration/pullrequests/activity",
+        dataTYpe: "json",
+        async: false,
+        headers: {
+            "Authorization": "Basic " + btoa("gstarbuck" + ":" + "hgpass")
+        },
+        success: function(data) {
+            alert(data);
+        }
+    })
 }
