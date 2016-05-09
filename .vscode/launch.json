@@ -4,12 +4,12 @@
         { 
             "name": "Launch Electron App",
             "type": "node",
-            "program": "app/main.js", // important
+            "program": "${workspaceRoot}/app/main.js", // important
             "stopOnEntry": false,
             "args": [],
-            "cwd": ".",
+            "cwd": "${workspaceRoot}/",
             // next line is very important
-            "runtimeExecutable": "node_modules/electron-prebuilt/dist/electron.exe",
+            "runtimeExecutable": "${workspaceRoot}/app/node_modules/electron-prebuilt/dist/electron.exe",
             "runtimeArguments": [],
             "env": { }, 
             "sourceMaps": false
